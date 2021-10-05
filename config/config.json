@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "username",
-    "password": "password",
-    "database": "people",
+    "username": "ag961",
+    "password": "ayrat",
+    "database": "items",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "username",
-    "password": "password",
-    "database": "people",
+    "username": "ag961",
+    "password": "ayrat",
+    "database": "items",
     "host": "127.0.0.1",
-    "dialect": "sqlite:memory:"
+    "dialect": "sqlite:memory"
   },
   "production": {
-    "username": "username",
-    "password": "password",
-    "database": "people",
+    "username": "ag961",
+    "password": "ayrat",
+    "database": "items",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
