@@ -11,6 +11,12 @@ router.post('/cars', createCar);
 router.put('cars/:id', updateCar);
 router.delete('/cars/:id', deleteCar);
 
+async function createCar(req, res) {
+  let CarData = req.body
+  let addedCar = await Cars.create(CarData);
+  res.status(200).json(addedCar);
+}
+
 async function getCars(req, res) {
   let allCars = await Cars.findAll();
   res.status(200).json(allCars);
@@ -22,16 +28,12 @@ async function getOneCar(req, res) {
   res.status(200).json(oneCar);
 }
 
-async function createCar(req, res) {
-
-  let CarData = req.body
-  let addedCar = await Cars.create(CarData);
-  res.status(200).json(addedCar);
-}
 
 async function updateCar(req, res) {
-  const id = req.params.id;
-  let updatedCar = await Cars.update({ where: { id: id } });
+  const id = parseInt(req.params.id);
+  const obj = req.body;
+  let car = await Cars.update({ where: { id: id } });
+  let updatedCar = await fruit.update(obj);
   res.status(200).json(updatedCar);
 }
 

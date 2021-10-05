@@ -13,6 +13,7 @@ const carRoutes = require('./routes/cars.js');
 app.use(express.json());
 app.use(logger);
 app.use(fruitRoutes);
+app.use(carRoutes);
 
 
 app.get('/test', (req, res) => {
