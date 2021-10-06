@@ -33,7 +33,7 @@ async function updateCar(req, res) {
   const id = parseInt(req.params.id);
   const obj = req.body;
   let car = await Cars.update({ where: { id: id } });
-  let updatedCar = await fruit.update(obj);
+  let updatedCar = await car.update(obj);
   res.status(200).json(updatedCar);
 }
 
